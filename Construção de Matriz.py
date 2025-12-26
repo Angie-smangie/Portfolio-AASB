@@ -4,10 +4,10 @@ def matriz_de_zeros(seq1,seq2):
 
 def primeira_linha_e_coluna(seq1,seq2,space):
     matriz=matriz_de_zeros(seq1,seq2)
-    for p1 in range(len(seq1)):
-        matriz[0][p1+1]=matriz[0][p1]+space
     for p2 in range(len(seq2)):
-        matriz[p2+1][0]=matriz[p2][0]+space
+        matriz[0][p2+1]=matriz[0][p2]+space
+    for p1 in range(len(seq1)):
+        matriz[p1+1][0]=matriz[p1][0]+space
     return matriz
 
 def needleman_wunsch(seq1,seq2,match=2,mismatch=-2,space=-5):
